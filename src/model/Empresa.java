@@ -1,3 +1,5 @@
+package model;
+
 public class Empresa {
     private int id_empresa;
     private String nome;

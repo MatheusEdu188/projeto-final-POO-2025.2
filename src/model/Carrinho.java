@@ -1,3 +1,5 @@
+package model;
+
 public class Carrinho {
 
     private int id_carrinho;

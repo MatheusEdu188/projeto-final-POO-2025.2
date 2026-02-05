@@ -1,3 +1,5 @@
+package model;
+
 public class UsuarioPermissao {
     private int id_permissao;
     private String tipo_permissao;

@@ -1,3 +1,5 @@
+package model;
+
 public class Produto {
     private int id_produto;
     private int quantidade_estoque;

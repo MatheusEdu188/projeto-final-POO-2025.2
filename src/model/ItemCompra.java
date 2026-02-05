@@ -1,3 +1,5 @@
+package model;
+
 public class ItemCompra {
     private int id_item_compra;
     private int quantidade;
