@@ -1,0 +1,6 @@
+com\projeto\poo\model\Sessao.class
+com\projeto\poo\util\ConnectionFactory.class
+com\projeto\poo\Main.class
+com\projeto\poo\model\Filme.class
+com\projeto\poo\dao\FilmeDAO.class
+com\projeto\poo\dao\SessaoDAO.class
