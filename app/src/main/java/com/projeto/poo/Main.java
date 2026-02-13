@@ -1,17 +1,22 @@
 package com.projeto.poo;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) {
-        Button btn = new Button("JavaFX rodando 🚀");
+    public void start(Stage stage) throws Exception{
 
-        Scene scene = new Scene(btn, 300, 200);
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("/login.fxml")
+        );
+            
+
+        Scene scene = new Scene(loader.load());
 
         stage.setTitle("Projeto JavaFX");
         stage.setScene(scene);
