@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
     
-    private static String URL = "localhost:5432";
+    private static String URL = "jdbc:postgres:localhost:5432/Cinema";
     private static String USER = "postgres";
     private static String PASS = "12321";
 
