@@ -28,7 +28,7 @@ public class LoginController {
         String usuario = txtUsuario.getText();
         String senha = txtSenha.getText();
 
-        if (usuariodao.existeUsuario(usuario) && usuariodao.existeUsuario(senha)) {
+        if (usuariodao.buscarUsuario(usuario, senha) != null) {
             lblMensagem.setText("Login realizado com sucesso!");
         } else {
             lblMensagem.setText("Usuário ou senha inválidos.");

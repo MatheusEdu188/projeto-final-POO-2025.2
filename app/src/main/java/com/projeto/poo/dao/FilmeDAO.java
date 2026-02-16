@@ -68,21 +68,22 @@ public class FilmeDAO {
     ) {
 
         stmt.setInt(1, id);
-        ResultSet rs = stmt.executeQuery();
 
-        if (rs.next()) { 
-            Filme filme = new Filme();
+        try(ResultSet rs = stmt.executeQuery();){
+            if (rs.next()) { 
+                Filme filme = new Filme();
+    
+                filme.setId(rs.getInt("id"));
+                filme.setTitulo(rs.getString("titulo"));
+                filme.setDuracao(rs.getInt("duracao"));
+                filme.setClassificacao(rs.getString("classificacao"));
+                filme.setGenero(rs.getString("genero"));
+    
+                return filme;
+            }
 
-            filme.setId(rs.getInt("id"));
-            filme.setTitulo(rs.getString("titulo"));
-            filme.setDuracao(rs.getInt("duracao"));
-            filme.setClassificacao(rs.getString("classificacao"));
-            filme.setGenero(rs.getString("genero"));
-
-            return filme;
         }
-
-        rs.close();
+        
 
     } catch (SQLException e) {
         e.printStackTrace();

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.mindrot.jbcrypt.BCrypt;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,9 @@ public class UsuarioDAO{
             PreparedStatement ps = conn.prepareStatement(sql);
     ) {
         ps.setString(1, usuario.getNome_usuario());
-        ps.setString(2, usuario.getSenha());
+
+        String senhahash = BCrypt.hashpw(usuario.getSenha(), BCrypt.gensalt());
+        ps.setString(2, senhahash);
 
         ps.executeUpdate();
             
@@ -50,6 +53,92 @@ public class UsuarioDAO{
         }
 
         return false;
-}
+    }
+
+    public Usuario buscarUsuario(String nome, String senha){
+        String sql = "SELECT * FROM usuario WHERE nome_usuario = ?";
+
+        try(Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, nome);
+                
+
+                try(ResultSet rs = stmt.executeQuery()){
+
+                    if (rs.next()) {
+                        String senhaHashBanco = rs.getString("senha");
+                        if (BCrypt.checkpw(senha, senhaHashBanco)) {
+                            Usuario usuario = new Usuario();
+        
+                            usuario.setNome_usuario(rs.getString("nome_usuario"));
+                            usuario.setSenha(senhaHashBanco);
+        
+                            return usuario;
+                        }
+                    }
+
+                }
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    public void deletarUsuario(int id){
+        String sql = "DELETE FROM usuario where id_usuario = ?";
+
+        try(Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)){
+                stmt.setInt(1, id);
+
+                stmt.executeUpdate();
+        }catch(SQLException e){
+            e.printStackTrace();
+
+        }
+    }
+
+
+    public List<Usuario> listarUsuario(){
+        String sql = "Select * from usuario";
+        List<Usuario> usuarios = new ArrayList<>();
+
+        try(Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Usuario usuario = new Usuario();
+                    usuario.setId_usuario(rs.getInt("id_usuario"));
+                    usuario.setNome_usuario(rs.getString("nome_usuario"));
+
+                    usuarios.add(usuario);
+
+                    
+                }
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return usuarios;
+    }
+
+
+    public void editarUsuario(Usuario usuario){
+        String sql = "UPDATE usuario SET nome_usuario = ?, senha = ?  WHERE id_usuario = ?;";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)){
+                stmt.setString(1, usuario.getNome_usuario());
+                stmt.setString(2, usuario.getSenha());
+                stmt.setInt(3, usuario.getId_usuario());
+
+                stmt.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
