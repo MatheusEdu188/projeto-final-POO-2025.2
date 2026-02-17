@@ -8,7 +8,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +36,19 @@ public class TelaListarController {
         List<Filme> lista = filmeDAO.listar();
 
         for(Filme u: lista){
+            HBox linha = new HBox(10);
+
             Label nome = new Label(
                 "ID: " + u.getId() + "\n| Titulo: " + u.getTitulo() + "\n| Classificação: " + u.getClassificacao() + "\n| Duração: " + u.getDuracao() + "\n| Genero: " + u.getGenero()
 
             );
+
+            Button btnExcluir = new Button("Excluir");
+
+            btnExcluir.setOnAction(e -> {
+                filmeDAO.remover(u.getId());
+                atualizarLista();
+            });
 
             nome.setStyle(
                     "-fx-background-color: #2c3e50;" +
@@ -44,9 +57,11 @@ public class TelaListarController {
                     "-fx-background-radius: 5;"
             );
 
+            linha.getChildren().addAll(nome, btnExcluir);
+
             nome.setMaxWidth(Double.MAX_VALUE);
 
-            vboxUsuarios.getChildren().add(nome);
+            vboxUsuarios.getChildren().add(linha);
         }
     }
 
