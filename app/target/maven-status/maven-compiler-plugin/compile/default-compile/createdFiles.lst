@@ -1,6 +1,0 @@
-com/projeto/poo/model/Usuario.class
-com/projeto/poo/util/ConnectionFactory.class
-com/projeto/poo/model/Sessao.class
-com/projeto/poo/dao/SessaoDAO.class
-com/projeto/poo/model/Filme.class
-com/projeto/poo/dao/UsuarioDAO.class

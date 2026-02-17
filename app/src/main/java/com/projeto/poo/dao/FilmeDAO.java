@@ -58,19 +58,20 @@ public class FilmeDAO {
     }
 
 
-   public Filme buscarPorId(int id) {
+   public List<Filme> buscarPorTitulo(String titulo) {
 
-    String sql = "SELECT * FROM filme WHERE id = ?";
+    String sql = "SELECT * FROM filme WHERE LOWER(titulo) LIKE ?";
+    List<Filme> filmes = new ArrayList<>();
 
     try (
         Connection conn = ConnectionFactory.getConnection();
         PreparedStatement stmt = conn.prepareStatement(sql);
     ) {
 
-        stmt.setInt(1, id);
+        stmt.setString(1, "%" + titulo.toLowerCase() + "%");
 
         try(ResultSet rs = stmt.executeQuery();){
-            if (rs.next()) { 
+            while (rs.next()) { 
                 Filme filme = new Filme();
     
                 filme.setId(rs.getInt("id"));
@@ -78,8 +79,9 @@ public class FilmeDAO {
                 filme.setDuracao(rs.getInt("duracao"));
                 filme.setClassificacao(rs.getString("classificacao"));
                 filme.setGenero(rs.getString("genero"));
+
+                filmes.add(filme);
     
-                return filme;
             }
 
         }
@@ -89,7 +91,7 @@ public class FilmeDAO {
         e.printStackTrace();
     }
 
-    return null; 
+    return filmes;
 }
 
     public void updateFilme(Filme filme){

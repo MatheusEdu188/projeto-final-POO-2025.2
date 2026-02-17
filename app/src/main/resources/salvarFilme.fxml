@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml" fx:controller="com.projeto.poo.controller.AdicionarFilmeController">
+   <children>
+      <Text layoutX="253.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Filme" textAlignment="CENTER">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="campoTitulo" layoutX="140.0" layoutY="117.0" prefHeight="36.0" prefWidth="184.0" promptText="Digite o titulo do Filme">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="campoGenero" layoutX="140.0" layoutY="253.0" prefHeight="36.0" prefWidth="184.0" promptText="Digite o Genero do Filme">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="campoClassi" layoutX="140.0" layoutY="324.0" prefHeight="36.0" prefWidth="184.0" promptText="Digite a Classificaçao">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Spinner fx:id="campoDuracao" layoutX="140.0" layoutY="188.0" prefHeight="36.0" prefWidth="184.0" />
+      <Text layoutX="74.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="44.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duraçao" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="55.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genero" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="8.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classificaçao" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button onAction="#salvarFilme" fx:id="btnSalvar" layoutX="173.0" layoutY="421.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="118.0" text="Adicionar" />
+      <Text fx:id="textoSalvo" layoutX="188.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="87.2959976196289">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
