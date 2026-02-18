@@ -24,7 +24,7 @@
             <Font name="DejaVu Serif Bold" size="50.0" />
          </font>
       </Text>
-      <Text fill="#0248ab" layoutX="215.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fazer Login" underline="true" />
+      <Text fill="#0248ab" layoutX="215.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fazer Login" onMouseClicked="#irParaLogin" underline="true" />
 
    </children>
 </Pane>

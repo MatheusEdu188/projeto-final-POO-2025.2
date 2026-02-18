@@ -1,6 +1,8 @@
 package com.projeto.poo.controller;
 
 
+import java.io.IOException;
+
 import com.projeto.poo.dao.FilmeDAO;
 import com.projeto.poo.dao.UsuarioDAO;
 import com.projeto.poo.model.Filme;
@@ -10,6 +12,7 @@ import com.projeto.poo.model.Filme;
 
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Spinner;
@@ -80,4 +83,15 @@ public class AdicionarFilmeController {
 
     }
     
+
+
+    private NavegacaoController navegacao = new NavegacaoController();
+
+
+    @FXML
+
+    private void irParaHome(ActionEvent event) throws IOException {
+        navegacao.trocarTela(event, "/home.fxml");
+    }
+
 }

@@ -7,6 +7,7 @@
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/Main.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/dao/FilmeDAO.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/model/Sessao.java
+/home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/controller/NavegacaoController.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/controller/AdicionarFilmeController.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/controller/RegistroController.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/model/Filme.java

@@ -25,6 +25,6 @@
     <Button graphicTextGap="10.0" onAction="#fazerLogin" prefHeight="42.0" prefWidth="71.0" style="-fx-background-color: green;" text="Entrar" textFill="WHITE" />
 
     <Label fx:id="lblMensagem" />
-   <Text fill="#00617c" strokeType="OUTSIDE" strokeWidth="0.0" text="Sou Cadastrado" textAlignment="CENTER" underline="true" wrappingWidth="167.13000106811523" />
+   <Text fill="#00617c" strokeType="OUTSIDE" onMouseClicked="#irParaRegistro" strokeWidth="0.0" text="Não Sou Cadastrado" textAlignment="CENTER" underline="true" wrappingWidth="167.13000106811523" />
 
 </VBox>

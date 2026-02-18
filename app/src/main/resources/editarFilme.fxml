@@ -67,5 +67,6 @@
             <Font size="15.0" />
          </font>
       </Text>
+      <Button  layoutX="32.0" layoutY="21.0" mnemonicParsing="false" onAction="#irParaHome" prefHeight="30.0" prefWidth="118.0" text="Voltar" />
    </children>
 </Pane>

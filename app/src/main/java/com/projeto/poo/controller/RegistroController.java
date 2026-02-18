@@ -1,10 +1,13 @@
 package com.projeto.poo.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import com.projeto.poo.dao.UsuarioDAO;
@@ -51,6 +54,15 @@ public class RegistroController {
                 lblSucesso.setText("Usuário já existe!");
              }
         }
+    }
+
+    private NavegacaoController navegacao = new NavegacaoController();
+
+
+    @FXML
+
+    private void irParaLogin(MouseEvent event) throws IOException {
+        navegacao.trocarTela(event, "/login.fxml");
     }
     
 }
