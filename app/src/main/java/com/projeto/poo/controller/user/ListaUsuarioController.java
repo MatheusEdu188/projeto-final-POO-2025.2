@@ -3,10 +3,6 @@ package com.projeto.poo.controller.user;
 import java.io.IOException;
 import java.util.List;
 
-<<<<<<< HEAD
-=======
-import com.projeto.poo.dao.FilmeDAO;
->>>>>>> refs/remotes/origin/main
 import com.projeto.poo.dao.UsuarioDAO;
 import com.projeto.poo.controller.NavegacaoController;
 import com.projeto.poo.model.Usuario;
@@ -26,6 +22,7 @@ public class ListaUsuarioController {
 
     private UsuarioDAO usuarioDAO = new UsuarioDAO();
 
+    private NavegacaoController navegacao = new NavegacaoController();
 
     @FXML
     public void initialize(){
@@ -45,11 +42,22 @@ public class ListaUsuarioController {
 
             Button btnExcluir = new Button("Excluir");
 
+            Button btnEditar = new Button("Editar");
+
             btnExcluir.setOnAction(e -> {
                 usuarioDAO.deletarUsuario(u.getId_usuario());
                 atualizarLista();
             });
 
+            btnEditar.setOnAction(e -> {
+                try {
+                    navegacao.trocarTela(e, "/user/editarUsuario.fxml", u.getId_usuario());
+                } catch (Exception erro) {
+                    System.out.println(erro);
+                }
+            });
+
+        
             nome.setStyle(
                     "-fx-background-color: #2c3e50;" +
                     "-fx-text-fill: white;" +
@@ -58,10 +66,13 @@ public class ListaUsuarioController {
             );
 
             linha.getChildren().addAll(nome, btnExcluir);
+            linha.getChildren().add(btnEditar);
 
             nome.setMaxWidth(Double.MAX_VALUE);
 
             vboxUsuarios.getChildren().add(linha);
+
+            
         }
     }
 
@@ -117,7 +128,6 @@ public class ListaUsuarioController {
 
 
 
-    private NavegacaoController navegacao = new NavegacaoController();
 
     @FXML
     private void irParaHome(ActionEvent event) throws IOException {

@@ -1,6 +1,5 @@
 package com.projeto.poo.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -8,7 +7,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import com.projeto.poo.dao.UsuarioDAO;
 import com.projeto.poo.model.Usuario;

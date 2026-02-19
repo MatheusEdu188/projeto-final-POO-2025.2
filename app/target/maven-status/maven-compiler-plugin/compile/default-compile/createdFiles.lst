@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 com\projeto\poo\model\Usuario.class
 com\projeto\poo\dao\SessaoDAO.class
 com\projeto\poo\Home.class
@@ -15,7 +13,7 @@ com\projeto\poo\dao\FilmeDAO.class
 com\projeto\poo\controller\AtualizarFilmeController.class
 com\projeto\poo\util\ConnectionFactory.class
 com\projeto\poo\controller\RegistroController.class
+com\projeto\poo\controller\sessao\ListarSessaoController.class
 com\projeto\poo\Main.class
 com\projeto\poo\controller\NavegacaoController.class
 com\projeto\poo\model\Sessao.class
->>>>>>> refs/remotes/origin/main

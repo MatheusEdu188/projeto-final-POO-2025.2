@@ -52,7 +52,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Button layoutX="32.0" layoutY="21.0" mnemonicParsing="false" onAction="#irParaHome" prefHeight="30.0" prefWidth="118.0" text="Voltar" />
+      <Button layoutX="32.0" layoutY="21.0" mnemonicParsing="false" onAction="#irParaUsuario" prefHeight="30.0" prefWidth="118.0" text="Voltar" />
       <AmbientLight color="CHARTREUSE" layoutX="693.0" layoutY="36.0" lightOn="true" />
       <Text fx:id="textoSalvo" layoutX="221.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
