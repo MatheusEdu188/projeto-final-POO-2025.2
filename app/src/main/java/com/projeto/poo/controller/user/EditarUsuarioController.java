@@ -3,20 +3,15 @@ package com.projeto.poo.controller.user;
 import java.io.IOException;
 import java.util.List;
 
-import com.projeto.poo.DAO.FilmeDAO;
-import com.projeto.poo.DAO.UsuarioDAO;
+import com.projeto.poo.dao.UsuarioDAO;
 import com.projeto.poo.controller.NavegacaoController;
-import com.projeto.poo.model.Filme;
 import com.projeto.poo.model.Usuario;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class EditarUsuarioController {
@@ -31,6 +26,16 @@ public class EditarUsuarioController {
     @FXML
     private Text textoSalvo;
     
+
+    @FXML
+    public void initialize() {
+        campoID.setValueFactory(
+            new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 500, 0)
+        );
+        campoID.setValueFactory(
+            new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 500, 0)
+        );
+    }
     
     @FXML
     private void editarUsuario(){
@@ -53,7 +58,7 @@ public class EditarUsuarioController {
 
         UsuarioDAO usuarioDAO = new UsuarioDAO();
 
-        usuarioDAO.editarUsuario(usuario);;
+        usuarioDAO.editarUsuario(usuario);
         textoSalvo.setText("Usuario Editado Com Sucesso!");
         
         campoNome.clear();
