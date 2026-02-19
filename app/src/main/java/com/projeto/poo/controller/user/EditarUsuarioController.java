@@ -10,6 +10,7 @@ import com.projeto.poo.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -25,6 +26,16 @@ public class EditarUsuarioController {
     @FXML
     private Text textoSalvo;
     
+
+    @FXML
+    public void initialize() {
+        campoID.setValueFactory(
+            new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 500, 0)
+        );
+        campoID.setValueFactory(
+            new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 500, 0)
+        );
+    }
     
     @FXML
     private void editarUsuario(){
@@ -47,7 +58,7 @@ public class EditarUsuarioController {
 
         UsuarioDAO usuarioDAO = new UsuarioDAO();
 
-        usuarioDAO.editarUsuario(usuario);;
+        usuarioDAO.editarUsuario(usuario);
         textoSalvo.setText("Usuario Editado Com Sucesso!");
         
         campoNome.clear();

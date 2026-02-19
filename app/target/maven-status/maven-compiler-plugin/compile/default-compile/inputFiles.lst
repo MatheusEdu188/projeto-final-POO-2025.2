@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/controller/user/EditarUsuarioController.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/controller/TelaListarController.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/util/ConnectionFactory.java
@@ -17,3 +18,23 @@
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/dao/UsuarioDAO.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/controller/user/ListaUsuarioController.java
 /home/matheus/Documentos/Projeto-POO/projeto-final-POO-2025.2/app/src/main/java/com/projeto/poo/dao/SessaoDAO.java
+=======
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\AdicionarFilmeController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\AtualizarFilmeController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\LoginController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\NavegacaoController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\RegistroController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\TelaListarController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\user\EditarUsuarioController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\controller\user\ListaUsuarioController.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\dao\FilmeDAO.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\dao\SessaoDAO.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\dao\UsuarioDAO.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\Home.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\Main.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\model\Filme.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\model\Sessao.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\model\Usuario.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\Registro.java
+C:\Users\gabri\Meus Documentos\VScode\Java\projeto-final-POO-2025.2\app\src\main\java\com\projeto\poo\util\ConnectionFactory.java
+>>>>>>> refs/remotes/origin/main

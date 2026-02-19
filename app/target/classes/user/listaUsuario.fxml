@@ -26,8 +26,6 @@
       <Button layoutX="14.0" layoutY="14.0" onAction="#irParaHome" prefHeight="38.0" prefWidth="100.0" text="Voltar" />
 
       <Button layoutX="14.0" layoutY="68.0" onAction="#irParaEditarUsuario" prefHeight="38.0" prefWidth="100.0" text="Editar" />
-
-      <Button layoutX="14.0" layoutY="125.0" prefHeight="38.0" prefWidth="100.0" text="Salvar" />
       <TextField fx:id="formBuscaUsuario" layoutX="14.0" layoutY="236.0" prefHeight="25.0" prefWidth="107.0" promptText="Buscar Usuario" />
       <Button fx:id="btnBusca" layoutX="27.0" layoutY="275.0" mnemonicParsing="false" onAction="#carregarBusca" prefHeight="25.0" prefWidth="74.0" text="Buscar" />
 

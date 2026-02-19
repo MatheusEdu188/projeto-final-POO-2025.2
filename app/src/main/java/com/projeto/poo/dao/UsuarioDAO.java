@@ -123,7 +123,11 @@ public class UsuarioDAO {
         try (Connection conn = ConnectionFactory.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, usuario.getNome_usuario());
-            stmt.setString(2, usuario.getSenha());
+
+            String senhahash = BCrypt.hashpw(usuario.getSenha(), BCrypt.gensalt());
+            stmt.setString(2, senhahash);
+
+            
             stmt.setInt(3, usuario.getId_usuario());
 
             stmt.executeUpdate();

@@ -3,6 +3,10 @@ package com.projeto.poo.controller.user;
 import java.io.IOException;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+import com.projeto.poo.dao.FilmeDAO;
+>>>>>>> refs/remotes/origin/main
 import com.projeto.poo.dao.UsuarioDAO;
 import com.projeto.poo.controller.NavegacaoController;
 import com.projeto.poo.model.Usuario;
