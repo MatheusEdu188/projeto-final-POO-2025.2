@@ -1,4 +1,4 @@
-package com.projeto.poo.DAO;
+package com.projeto.poo.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

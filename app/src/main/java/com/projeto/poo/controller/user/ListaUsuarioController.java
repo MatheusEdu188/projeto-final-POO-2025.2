@@ -3,10 +3,8 @@ package com.projeto.poo.controller.user;
 import java.io.IOException;
 import java.util.List;
 
-import com.projeto.poo.DAO.FilmeDAO;
-import com.projeto.poo.DAO.UsuarioDAO;
+import com.projeto.poo.dao.UsuarioDAO;
 import com.projeto.poo.controller.NavegacaoController;
-import com.projeto.poo.model.Filme;
 import com.projeto.poo.model.Usuario;
 
 import javafx.event.ActionEvent;
