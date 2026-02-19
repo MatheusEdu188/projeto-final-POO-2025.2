@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import com.projeto.poo.dao.UsuarioDAO;
+import com.projeto.poo.DAO.UsuarioDAO;
 import com.projeto.poo.model.Usuario;
 
 public class RegistroController {

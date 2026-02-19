@@ -1,7 +1,7 @@
 package com.projeto.poo.controller;
 
-import com.projeto.poo.dao.FilmeDAO;
-import com.projeto.poo.dao.UsuarioDAO;
+import com.projeto.poo.DAO.FilmeDAO;
+import com.projeto.poo.DAO.UsuarioDAO;
 import com.projeto.poo.model.Filme;
 
 import javafx.event.ActionEvent;
@@ -118,7 +118,6 @@ public class TelaListarController {
     private void atualizarLista(){
         vboxUsuarios.getChildren().clear();
         carregarFilmes();
-
     }
 
     private NavegacaoController navegacao = new NavegacaoController();
@@ -141,6 +140,9 @@ public class TelaListarController {
         navegacao.trocarTela(event, "/login.fxml");
     }
 
-    
+    @FXML
+    private void irParaUsuario(ActionEvent event) throws IOException {
+        navegacao.trocarTela(event, "/user/listaUsuario.fxml");
+    }
     
 }

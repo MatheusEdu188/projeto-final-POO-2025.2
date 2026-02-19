@@ -2,7 +2,7 @@ package com.projeto.poo.controller;
 
 import java.io.IOException;
 
-import com.projeto.poo.dao.UsuarioDAO;
+import com.projeto.poo.DAO.UsuarioDAO;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

@@ -1,8 +1,8 @@
 package com.projeto.poo.controller;
 import java.io.IOException;
 
-import com.projeto.poo.dao.FilmeDAO;
-import com.projeto.poo.dao.UsuarioDAO;
+import com.projeto.poo.DAO.FilmeDAO;
+import com.projeto.poo.DAO.UsuarioDAO;
 import com.projeto.poo.model.Filme;
 
 

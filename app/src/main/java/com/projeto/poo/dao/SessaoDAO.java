@@ -1,4 +1,4 @@
-package com.projeto.poo.dao;
+package com.projeto.poo.DAO;
 
 import java.sql.*;
 import java.util.ArrayList;

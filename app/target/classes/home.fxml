@@ -17,9 +17,9 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="610.0" prefWidth="200.0">
                <children>
-                  <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Usuarios" />
+                  <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#irParaUsuario" prefHeight="40.0" prefWidth="104.0" text="Usuarios" />
                   <Button layoutX="8.0" layoutY="70.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Sessoes" />
-                  <Button layoutX="8.0" onAction="#irParaLogin" layoutY="546.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Voltar" />
+                  <Button layoutX="8.0" layoutY="546.0" mnemonicParsing="false" onAction="#irParaLogin" prefHeight="40.0" prefWidth="104.0" text="Voltar" />
                   <Text layoutX="124.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;-">
                      <font>
                         <Font name="DejaVu Sans Condensed Bold" size="20.0" />
@@ -36,8 +36,8 @@
                      </font>
                   </Text>
                   <Button layoutX="8.0" layoutY="277.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Excluir" />
-                  <Button layoutX="8.0" onAction="#irParaEditar"  layoutY="226.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Editar" />
-                  <Button layoutX="8.0" onAction="#irParaSalvar" layoutY="175.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Adicionar" />
+                  <Button layoutX="8.0" layoutY="226.0" mnemonicParsing="false" onAction="#irParaEditar" prefHeight="40.0" prefWidth="104.0" text="Editar" />
+                  <Button layoutX="8.0" layoutY="175.0" mnemonicParsing="false" onAction="#irParaSalvar" prefHeight="40.0" prefWidth="104.0" text="Adicionar" />
 
 
                   <TextField fx:id="formBuscaFilme" layoutX="8.0" layoutY="355.0" promptText="Buscar Titulo" />
