@@ -127,6 +127,7 @@ public class UsuarioDAO {
             String senhahash = BCrypt.hashpw(usuario.getSenha(), BCrypt.gensalt());
             stmt.setString(2, senhahash);
 
+            
             stmt.setInt(3, usuario.getId_usuario());
 
             stmt.executeUpdate();
@@ -142,7 +143,7 @@ public class UsuarioDAO {
         try {
             Connection conn = ConnectionFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, "%" + nome + "%");
+            pstmt.setString(1, "%" +nome+ "%");
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
@@ -156,30 +157,8 @@ public class UsuarioDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return usuarios;
+            return usuarios;
 
     }
 
-    public Usuario buscarUsuario(int id) {
-        String sql = "SELECT * FROM usuario WHERE id_usuario = ?";
-
-        try (Connection conn = ConnectionFactory.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                Usuario usuario = new Usuario(
-                        id,
-                        rs.getString("nome_usuario"),
-                        "");
-                return usuario;
-            }
-            return null;
-        } catch (SQLException e) {
-            
-            e.printStackTrace();
-            return null;
-        }
-
-    }
 }
