@@ -30,23 +30,11 @@ public class EditarUsuarioController {
     public void initialize() {
         campoID.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 500, 0));
-        campoID.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 500, 0));
     }
-
-
-    private int id;
-
-    @FXML
-    public void receberId(int id) {
-        this.id = id;
-    }
-    
 
     @FXML
     private void editarUsuario() {
 
-        Usuario usuario = new Usuario();
 
         String nome = campoNome.getText().trim();
         String senha = campoSenha.getText().trim();
@@ -56,7 +44,7 @@ public class EditarUsuarioController {
             textoSalvo.setText("Preencha todos os campos!");
             return;
         }
-
+        Usuario usuario = new Usuario();
         usuario.setNome_usuario(nome);
         usuario.setSenha(senha);
         usuario.setId_usuario(id);

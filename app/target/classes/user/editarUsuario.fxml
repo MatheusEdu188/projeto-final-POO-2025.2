@@ -46,7 +46,7 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Spinner fx:id="campoID" editable="true" layoutX="140.0" layoutY="113.0" prefHeight="36.0" prefWidth="184.0" />
+      <Spinner fx:id="campoID" layoutX="140.0" layoutY="113.0" prefHeight="36.0" prefWidth="184.0" />
       <Text fx:id="textoSalvo1" layoutX="324.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Primeiro Digite o ID do usuario que deseja editar" textAlignment="CENTER" wrappingWidth="198.2959976196289">
          <font>
             <Font size="15.0" />

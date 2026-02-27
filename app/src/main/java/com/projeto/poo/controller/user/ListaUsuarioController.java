@@ -42,21 +42,10 @@ public class ListaUsuarioController {
 
             Button btnExcluir = new Button("Excluir");
 
-            Button btnEditar = new Button("Editar");
-
             btnExcluir.setOnAction(e -> {
                 usuarioDAO.deletarUsuario(u.getId_usuario());
                 atualizarLista();
             });
-
-            btnEditar.setOnAction(e -> {
-                try {
-                    navegacao.trocarTela(e, "/user/editarUsuario.fxml", u.getId_usuario());
-                } catch (Exception erro) {
-                    System.out.println(erro);
-                }
-            });
-
         
             nome.setStyle(
                     "-fx-background-color: #2c3e50;" +
@@ -66,7 +55,6 @@ public class ListaUsuarioController {
             );
 
             linha.getChildren().addAll(nome, btnExcluir);
-            linha.getChildren().add(btnEditar);
 
             nome.setMaxWidth(Double.MAX_VALUE);
 
